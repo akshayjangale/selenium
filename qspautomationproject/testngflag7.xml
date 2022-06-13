@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+
+	<groups><!-- use this to execute the selected groups in testngflags-->
+		<define name="ActitimeTestCases">
+			<include name="Functional"></include>
+			<include name="Integration"></include>
+			<include name="Smoke"></include>
+		</define>
+		<run>
+		<include name="Integration"></include> <!-- enter the test case name you want to execute -->
+		<exclude name="Smoke"></exclude> <!-- used to exclude the selected testcase for execution-->
+		</run>
+	</groups>
+    
+	<classes>
+      <class name="testngflag.flag7"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
