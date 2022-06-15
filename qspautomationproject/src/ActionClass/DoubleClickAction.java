@@ -20,6 +20,7 @@ public class DoubleClickAction {
 		 
 		 WebElement target = driver.findElement(By.xpath("//*[@id=\"authentication\"]/button"));
 		 Actions act = new Actions(driver);
+		//used to perform double click operation
 		 act.doubleClick(target).perform();
 		 
 		 Thread.sleep(4000);
