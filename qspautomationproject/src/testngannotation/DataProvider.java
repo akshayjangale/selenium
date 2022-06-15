@@ -21,10 +21,11 @@ public class DataProvider {
 		driver.get("http://127.0.0.1/login.do");
 	}
 	
-	@DataProvider(name = "testActiTimeData")
+	@org.testng.annotations.DataProvider(name = "testActiTimeData")
 	public Object[][] dataProvider() {
 		
 		Object[][] data = new Object[5][2];
+		return data;
 		
 	}
   @Test(dataProvider = "testActiTimeData")
